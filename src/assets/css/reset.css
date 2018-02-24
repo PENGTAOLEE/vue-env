@@ -1,0 +1,102 @@
+@charset "UTF-8";
+img{
+    border:0;
+    vertical-align: bottom;
+}
+li,ul{
+    list-style: none;
+}
+html, body {
+    height: 100%;
+    background: #f5f6fa;
+}
+* {
+   vertical-align: baseline;
+   font-weight: inherit; 
+   font-family: inherit; 
+   font-style: inherit;
+   font-size: 100%;
+   outline: 0;
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+   font-size: 0;
+}
+input, button, textarea {
+    border: none;
+    outline: none;
+}
+/* placeholder */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #ccc;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #ccc;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #ccc;
+}
+input {
+    -webkit-appearance: none;
+}
+a:visited,a:hover {
+    text-decoration: none;
+}
+a {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+    color:#333;
+    text-decoration:none;
+    outline:0;
+}
+/*浮动相关*/
+.clearfix:before, 
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.form-wrap input[type=text],
+.form-wrap input[type=password],
+.form-wrap textarea {
+    width: 6.9rem;
+    height: 0.8rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 0.08rem;
+    padding-left: 0.3rem;
+    outline: none;
+    background-color: #fff;
+    font-size: 0.3rem;
+    color: #333;
+}
+.form-wrap textarea {
+    padding: 0.2rem 0.3rem;
+    height: 2.38rem;
+    resize: none;
+}
+.fillin {
+    max-width: 750px;
+    margin: 0 auto;
+}
