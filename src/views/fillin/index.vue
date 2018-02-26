@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<head-com ref="headcom" :title="title"></head-com>	
+		<head-com v-if="!isIOSin114" ref="headcom" :title="title"></head-com>	
 		<div class="fillin">
 			<router-view></router-view>
 			<button id="submit" @click="generateQr" type="button">生成二维码</button>
@@ -17,7 +17,8 @@
 			return {
 				title: document.title,
 				type: '',
-				url: ''
+				url: '',
+				isIOSin114: false,
 			}
 		},
 		components: {
@@ -99,6 +100,14 @@
 				this.$router.push('/result/'+query);
 			}
 		},
+		created() {
+			// 兼容114啦APP ios兼容性 by@lpt
+			var isIOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+			if (window.Js114la && isIOS) {
+				this.isIOSin114 = true;
+			}
+		},
+
 		mounted () {
 		},
 		beforeDestroy () {
