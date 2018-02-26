@@ -24,8 +24,8 @@
 				this.currentId = id;
 				this.currentType = type;
 				// 当前选中的类型id
-
-				this.$emit('takeout', this.currentType)
+				this.$emit('takeout', this.currentType);
+				this.$store.commit('updateWIFItype', this.currentType);
 			}
 		},
 		mounted () {

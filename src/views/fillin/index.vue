@@ -35,20 +35,27 @@
 						var params = this.$store.state.TEXT;
 						if (params == '') {
 							this.$refs.headcom.errorTip('请输入内容');
+							return false;
 						}
 						break;
 					case 'website':
 						var params = this.$store.state.WEBSITE;
 						if (params == '') {
 							this.$refs.headcom.errorTip('请输入内容');
+							return false;
 						}
 						break;
 					case 'wifi':
-						var params = 'WIFI:S:' + this.$store.state.WIFIACCOUNT + 
-												 ';T:'+ this.$store.state.WIFITYPE + 
-												 ';P:' + this.$store.state.WIFIPASSWORD;
+						var params = 'WIFI:S:' + this.$store.state.WIFIACCOUNT +
+												 ';P:' + this.$store.state.WIFIPASSWORD + 
+												 ';T:'+ this.$store.state.WIFITYPE;
 						if (!this.$store.state.WIFIACCOUNT) {
 							this.$refs.headcom.errorTip('请输入账号');
+							return false;
+						}
+
+						if (!this.$store.state.WIFIPASSWORD) {
+							this.$refs.headcom.errorTip('请输入密码');
 							return false;
 						}
 

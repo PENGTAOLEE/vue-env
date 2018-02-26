@@ -71,7 +71,7 @@ var route = new Router({
       name: 'Result',
       component: Result,
       meta: {
-        title: '文本二维码'
+        title: '二维码'
       }
     },
   ]
