@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<head-com v-if="!isIOSin114" ref="headcom" :title="title"></head-com>	
+		<head-com v-show="!isIOSin114" ref="headcom" :title="title"></head-com>
 		<div class="fillin">
 			<router-view></router-view>
 			<button id="submit" @click="generateQr" type="button">生成二维码</button>
@@ -60,8 +60,6 @@
 							this.$refs.headcom.errorTip('请输入密码');
 							return false;
 						}
-
-						console.log(this.$store.state.WIFITYPE)
 
 						break;
 					case 'vcard':

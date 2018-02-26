@@ -24,12 +24,17 @@
 			},
 
 			errorTip(content) {
+				this.$refs.header.style.display = 'block';
 				this.$refs.header.classList.add('error');
 				this.$refs.header.setAttribute('data-content',content);
 
 				clearTimeout(this.timer);
 				this.timer = setTimeout(() => {
 					this.$refs.header.classList.remove('error');
+					var isIOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+					if (window.Js114la && isIOS) {
+						this.$refs.header.style.display = 'none';
+					}
 				},2000)
 			}
 		},
@@ -59,7 +64,7 @@
 		line-height: 0.88rem;
 		color: #fff;
 		font-size: 0.32rem;
-		opacity: 0.9;
+		/*opacity: 0.9;*/
 		background: #488bf1;
 	}
 	img {
