@@ -47,8 +47,9 @@
 						break;
 					case 'wifi':
 						var params = 'WIFI:S:' + this.$store.state.WIFIACCOUNT +
-												 ';P:' + this.$store.state.WIFIPASSWORD + 
-												 ';T:'+ this.$store.state.WIFITYPE;
+												 ';WIFI:P:' + this.$store.state.WIFIPASSWORD +
+												 ';WIFI:T:'+ this.$store.state.WIFITYPE +
+												 ';WIFI:T:'+ this.$store.state.WIFITYPE;
 						if (!this.$store.state.WIFIACCOUNT) {
 							this.$refs.headcom.errorTip('请输入账号');
 							return false;
@@ -58,6 +59,8 @@
 							this.$refs.headcom.errorTip('请输入密码');
 							return false;
 						}
+
+						console.log(this.$store.state.WIFITYPE)
 
 						break;
 					case 'vcard':

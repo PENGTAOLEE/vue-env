@@ -69,10 +69,7 @@ var route = new Router({
     {
       path: '/result/:id',
       name: 'Result',
-      component: Result,
-      meta: {
-        title: '二维码'
-      }
+      component: Result
     },
   ]
 })

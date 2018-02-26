@@ -47,7 +47,7 @@
 						src: '/static/images/qrcode/vcard.png',
 						text: '电子名片',
 						title: '名片二维码',
-						qrdesc: '使用手机自带相机扫描即可查看该电子名片类型'
+						qrdesc: '使用手机自带相机或微信扫描可直接加入通讯录'
 					},
 					{
 						id: '5',

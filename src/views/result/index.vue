@@ -13,6 +13,7 @@
 
 <script>
 	import store from '../../vuex/store'
+	import storage from '../../localStorage'
 
 	export default {
 		data () {
@@ -25,11 +26,19 @@
 		},
 		computed: {
 			desc() {
-				return this.$store.state.QRDESC
+				var desc;
+				var desc = storage.get('qr_code');
+
+				if (this.$store.state.QRDESC) {
+					desc = this.$store.state.QRDESC;
+				}
+
+				return desc;
 			}
 		},
 		methods: {
 			createAgent() {
+				storage.set('qr_code', this.$store.state.QRDESC);
 				this.$router.back(-1);
 			}
 		},

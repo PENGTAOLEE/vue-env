@@ -10,7 +10,7 @@ export default new Vuex.Store({
 		WEBSITE: 'http://',
 		WIFIACCOUNT: '',
 		WIFIPASSWORD: '',
-		WIFITYPE: '',
+		WIFITYPE: 'WPA',
 		CARD_NAME: '',
 		CARD_PHONE: '',
 		CARD_COMPANY: '',
