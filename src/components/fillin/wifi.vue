@@ -4,7 +4,7 @@
 			<li><input type="text" v-model="wifiAccount" placeholder="请输入您的Wi-Fi账号" /></li>
 			<li><input type="password" v-model="wifiPassword" placeholder="请输入您的密码" /></li>
 		</ul>
-		<p class="choose-title">选择二维码类型</p>
+		<p class="choose-title">加密类型</p>
 		<radios :list="list" @takeout="assign"></radios>
 	</div>
 	

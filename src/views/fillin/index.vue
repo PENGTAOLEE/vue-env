@@ -78,6 +78,16 @@
 							this.$refs.headcom.errorTip('请输入手机号码');
 							return false;
 						}
+
+						if (!/^((\(\d{3}\))|(\d{3}\-))?(1[3|4|5|7|8]\d{9}$)/.test(this.$store.state.PHONE)) {
+							this.$refs.headcom.errorTip('请检查您输入的手机号');
+							return false;
+						}
+
+						if (!this.$store.state.MESSAGE) {
+							this.$refs.headcom.errorTip('请输入短信内容');
+							return false;
+						}
 						break;
 					default:
 						console.log(23333)
