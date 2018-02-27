@@ -48,9 +48,10 @@
 						break;
 					case 'wifi':
 						var params = 'WIFI:S:' + this.$store.state.WIFIACCOUNT +
-												 ';WIFI:P:' + this.$store.state.WIFIPASSWORD +
-												 ';WIFI:T:'+ this.$store.state.WIFITYPE +
-												 ';WIFI:T:'+ this.$store.state.WIFITYPE;
+												 ';P:' + this.$store.state.WIFIPASSWORD +
+												 ';P:' + this.$store.state.WIFIPASSWORD +
+												 ';T:'+ this.$store.state.WIFITYPE +
+												 ';T:'+ this.$store.state.WIFITYPE;
 						if (!this.$store.state.WIFIACCOUNT) {
 							this.$refs.headcom.errorTip('请输入账号');
 							return false;
